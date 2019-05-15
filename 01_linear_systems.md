@@ -37,31 +37,39 @@ $D= \begin{bmatrix}
 &&& \lambda_n \\
 \end{bmatrix}$
 
-$ AT =TD $
+## Forumulas
 
-$ D = T^{-1} A T $
+$AT =TD$
 
-$ \dot{x} = T \dot{z} = Ax $
+$D = T^{-1} A T$
 
-$ T\dot{z} =  ATz$
+$\dot{x} = T \dot{z} = Ax$
 
-$ \dot{z} = T^{-1} A Tz $ 
+$T\dot{z} =  ATz$
 
-$ \dot{z} = Dz$ 
+$\dot{z} = T^{-1} A Tz$ 
+
+$\dot{z} = Dz$ 
 
 Diagonal dynamics mean the states are uncoupled from each other.
 
 ``` matlab
 [T, D] = eig(A);
 ```
-$ 
+$
 z(t) = e^{Dt}z(0) = \begin{bmatrix}
 e^{\lambda_1 t} &&& \\
 & e^{\lambda_2 t} & \text{\huge0} &\\
 & \text{\huge0}& \ddots && \\
 &&&& e^{\lambda_n t} \\
-\end{bmatrix}\
-$
+\end{bmatrix}$
 
+$A = TDT^{-1}$
+
+$e^{TDT^{-1}t} = TT^{-1} + TDT^{-1}t + ...  = T e^{Dt}T^{-1}$
+
+$A^n = TD^nT^{-1}$
+
+$x(t) = Tz(t) = T e^{Dt} z(0) = T e^{Dt}T^{-1} x(0)$
 
 
