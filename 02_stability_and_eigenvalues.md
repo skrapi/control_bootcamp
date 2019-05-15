@@ -17,4 +17,26 @@ $
 
 * What happens when $t \rightarrow \infty$
   
-The system is stable is all eigenvalues have negative real parts
+The system is stable is all eigenvalues have negative real parts:
+
+$\lambda_i = a_i+jb_i, a_i<0 for \ all \ i$
+
+## Discrete Stability
+
+$x_{k+1} = \tilde{A}x_k, \ x_k=x(k\Delta t)$
+
+$\tilde{A} = e^{A\Delta t}$
+
+$x_1 = \tilde{A}x_0, \lambda$
+
+$x_2 = \tilde{A}^2x_0, \lambda^2$
+
+$x_N = \tilde{A}^Nx_0, \lambda^N$
+
+$\lambda=Re^{i\theta}$
+
+$\lambda^N=R^Ne^{iN\theta}$
+
+$\tilde{A} = \tilde{T}\tilde{D}\tilde{T}^{-1}$
+
+This system is stable if all eigenvalues $\tilde{\lambda_i}$ have a radius of less than 1
